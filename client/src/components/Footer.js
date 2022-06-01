@@ -3,14 +3,10 @@ import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="page-footer blue darken-1">
+    <footer className="page-footer green darken-3">
       <div className="container">
         <div className="row">
-          <div className="col l6 s12">
-            <h5 className="white-text">Perehoda</h5>
-          </div>
-          <div className="col l4 offset-l2 s12">
-            <h5 className="white-text">Services</h5>
+          <div>
             <ul>
               <li><NavLink className="grey-text text-lighten-3" to="/">Главная</NavLink></li>
               <li><NavLink className="grey-text text-lighten-3" to="/leftovers">Остатки</NavLink></li>

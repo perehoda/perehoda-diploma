@@ -40,7 +40,7 @@ export const AuthPage = () => {
     <div className="row">
       <div className="container">
         <h2 className="center-align">Авторизация</h2>
-        <div className="card blue darken-1">
+        <div className="card green darken-1">
           <div className="card-content white-text">
             <span className="card-title">Авторизация</span>
             <div>
@@ -75,7 +75,7 @@ export const AuthPage = () => {
           </div>
           <div className="card-action">
             <button
-              className="btn yellow darken-4"
+              className="btn pink darken-1"
               onClick={ signInHandler }
               disabled={ loading }
             >
@@ -84,8 +84,7 @@ export const AuthPage = () => {
           </div>
         </div>
         <div>
-          <div>Новый пользователь?</div>
-          <div><NavLink to="/signup">Зарегистрироваться</NavLink></div>
+          <div><NavLink to="/signup">Регистрация</NavLink></div>
 			  </div>
       </div>
     </div>

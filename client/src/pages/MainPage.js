@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 export const MainPage = () => {
   return (
 		<div>
-			<div className="">
-				<h4>Учет</h4>
-				<div className="">
+			<div className="main">
+				<h4 className='center-align'>Учет:</h4>
+				<div className="main-links">
 					<NavLink to="/leftovers" className="black-text text-lighten-3">
 						<div>
 							<h5>Остатки</h5>

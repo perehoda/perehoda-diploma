@@ -26,7 +26,7 @@ export const LeftoversPage = () => {
       <div className="row">
         <div className="container">
           <h3 className="center-align">Остатки</h3>
-          <div className="card blue darken-1">
+          <div className="card green darken-1">
             <table className="responsive-table">
               <tbody>
 

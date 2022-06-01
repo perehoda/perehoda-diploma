@@ -5,8 +5,8 @@ export const Navbar = () => {
   return (
     <header>
       <nav>
-        <div className="nav-wrapper blue darken-1" style={{ padding: '0 2rem' }}>
-          <span className="brand-logo"><NavLink to="/">PA</NavLink></span>
+        <div className="nav-wrapper green darken-3" style={{ padding: '0 2rem' }}>
+          <span className="brand-logo"><NavLink to="/">Perehoda</NavLink></span>
           <NavLink to="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></NavLink>
           <ul className="right hide-on-med-and-down">
             <li><NavLink to="/">Главная</NavLink></li>

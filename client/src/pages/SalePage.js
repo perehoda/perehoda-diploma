@@ -40,8 +40,8 @@ export const SalePage = () => {
     <div>
       <div className="row">
         <div className="container">
-          <h3 className="center-align">Оформить продажу</h3>
-          <div className="card blue darken-1">
+          <h3 className="center-align">Продажа</h3>
+          <div className="card green darken-1">
             <div className="card-content white-text">
               <div>
 
@@ -76,11 +76,11 @@ export const SalePage = () => {
 
             <div className="card-action">
               <button
-                className="btn yellow darken-4"
+                className="btn pink darken-1"
                 onClick={ checkoutHandler }
                 disabled={ loading }
               >
-                Оформить
+                Совершить
               </button>
             </div>
 

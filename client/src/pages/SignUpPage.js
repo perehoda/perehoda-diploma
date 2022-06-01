@@ -41,7 +41,7 @@ export const SignUpPage = () => {
     <div className="row">
       <div className="container">
         <h2 className="center-align">Регистрация</h2>
-        <div className="card blue darken-1">
+        <div className="card green darken-1">
           <div className="card-content white-text">
             <div>
 
@@ -115,11 +115,11 @@ export const SignUpPage = () => {
           <div className="card-action">
             <NavLink to="/auth">
               <button
-                className="btn yellow darken-4"
+                className="btn pink darken-1"
                 onClick={ signUpHandler }
                 disabled={ loading }
               >
-                Зарегистрироваться
+                Регистрация
               </button>
             </NavLink>
           </div>

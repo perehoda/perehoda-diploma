@@ -36,12 +36,10 @@ export const PersonalPage = () => {
   if (loading) return <Loader />
 
   return (
-    <div>
-      <h2 className="center-align">Личный кабинет</h2>
+    <div className="personal-page">
+      <h2 className="center-align">Кабинет</h2>
 
       { !loading }
-
-      <h3 className="center-align">Персональные данные</h3>
 
       <table className="responsive-table">
         <tbody>
@@ -64,8 +62,8 @@ export const PersonalPage = () => {
         </tbody>
       </table>
 
-      <div className="actionButtons">
-        <button className="blue darken-1"><a href="/" onClick={ logoutHandler } style={{ color: "white" }}>Выйти</a></button>
+      <div className="card-action">
+        <button className="btn pink darken-1"><a href="/" onClick={ logoutHandler } style={{ color: "white" }}>Выйти</a></button>
       </div>
 
     </div>

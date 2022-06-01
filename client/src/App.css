@@ -1,0 +1,11 @@
+@import "./styles/MainPage.css";
+
+.personal-page {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+}
+
+.personal-page .card-action {
+  margin-top: 2rem;
+}
