@@ -6,6 +6,7 @@ import { AuthPage } from './pages/AuthPage';
 import { PersonalPage } from './pages/PersonalPage';
 import { LeftoversPage } from './pages/LeftoversPage';
 import { ArrivalPage } from './pages/ArrivalPage';
+import { SalePage } from './pages/SalePage';
 
 export const useRoutes = isAuthenticated => {
   if (isAuthenticated) {
@@ -25,6 +26,9 @@ export const useRoutes = isAuthenticated => {
         </Route>
         <Route path="/arrival" exact>
           <ArrivalPage />
+        </Route>
+        <Route path="/sale" exact>
+          <SalePage />
         </Route>
         <Redirect to="/" />
       </Switch>

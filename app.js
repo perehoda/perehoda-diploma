@@ -11,6 +11,7 @@ app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/personal', require('./routes/personal.routes'));
 app.use('/api/leftovers', require('./routes/leftovers.routes'));
 app.use('/api/arrival', require('./routes/arrival.routes'));
+app.use('/api/sale', require('./routes/sale.routes'));
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')));
