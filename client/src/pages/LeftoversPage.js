@@ -33,7 +33,6 @@ export const LeftoversPage = () => {
                 <tr>
                   <td>№ п/п</td>
                   <td>Наименование</td>
-                  <td>Код</td>
                   <td>Артикул</td>
                   <td>Ед. изм</td>
                   <td>Цена</td>
@@ -46,7 +45,6 @@ export const LeftoversPage = () => {
                       <tr key={ product._id }>
                         <td>{ index + 1 }</td>
                         <td>{ product.name }</td>
-                        <td>{ product.code }</td>
                         <td>{ product.articul }</td>
                         <td>{ product.measure }</td>
                         <td>{ product.price }</td>

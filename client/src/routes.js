@@ -5,6 +5,7 @@ import { SignUpPage } from './pages/SignUpPage';
 import { AuthPage } from './pages/AuthPage';
 import { PersonalPage } from './pages/PersonalPage';
 import { LeftoversPage } from './pages/LeftoversPage';
+import { ArrivalPage } from './pages/ArrivalPage';
 
 export const useRoutes = isAuthenticated => {
   if (isAuthenticated) {
@@ -21,6 +22,9 @@ export const useRoutes = isAuthenticated => {
         </Route>
         <Route path="/leftovers" exact>
           <LeftoversPage />
+        </Route>
+        <Route path="/arrival" exact>
+          <ArrivalPage />
         </Route>
         <Redirect to="/" />
       </Switch>
