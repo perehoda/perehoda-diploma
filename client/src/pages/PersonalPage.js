@@ -2,13 +2,14 @@ import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from '../hooks/http.hook';
+import { Loader } from '../components/Loader';
 
 export const PersonalPage = () => {
   const history = useHistory();
   const auth = useContext(AuthContext);
 
   const [ user, setUser ] = useState([]);
-  const { request } = useHttp();
+  const { loading, request } = useHttp();
   const { token } = useContext(AuthContext);
 
   const logoutHandler = () => {
@@ -32,9 +33,13 @@ export const PersonalPage = () => {
     fetchData();
   }, [fetchData]);
 
+  if (loading) return <Loader />
+
   return (
     <div>
       <h2 className="center-align">Личный кабинет</h2>
+
+      { !loading }
 
       <h3 className="center-align">Персональные данные</h3>
 

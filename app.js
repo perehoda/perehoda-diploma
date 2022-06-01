@@ -7,14 +7,9 @@ const app = express();
 
 app.use(express.json({ extended: true }));
 
-/*
 app.use('/api/auth', require('./routes/auth.routes'));
-app.use('/api/vehicle', require('./routes/vehicle.routes'));
 app.use('/api/personal', require('./routes/personal.routes'));
-app.use('/api/trip', require('./routes/trip.routes'));
-app.use('/api/estate', require('./routes/estate.routes'));
-app.use('/api/health', require('./routes/health.routes'));
-*/
+app.use('/api/leftovers', require('./routes/leftovers.routes'));
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')));

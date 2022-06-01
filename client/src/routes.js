@@ -4,8 +4,10 @@ import { MainPage } from './pages/MainPage';
 import { SignUpPage } from './pages/SignUpPage';
 import { AuthPage } from './pages/AuthPage';
 import { PersonalPage } from './pages/PersonalPage';
+import { LeftoversPage } from './pages/LeftoversPage';
 
 export const useRoutes = isAuthenticated => {
+  console.log(isAuthenticated);
   if (isAuthenticated) {
     return (
       <Switch>
@@ -17,6 +19,9 @@ export const useRoutes = isAuthenticated => {
         </Route>
         <Route path="/main" exact>
           <MainPage />
+        </Route>
+        <Route path="/leftovers" exact>
+          <LeftoversPage />
         </Route>
         <Redirect to="/" />
       </Switch>

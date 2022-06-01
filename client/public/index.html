@@ -9,5 +9,11 @@
   <body>
     <div id="root"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+      setTimeout(() => {
+        const sideNav = document.querySelector(".sidenav");
+        window.M.Sidenav.init(sideNav, {});
+      }, 1000);
+    </script>
   </body>
 </html>
