@@ -7,7 +7,6 @@ import { PersonalPage } from './pages/PersonalPage';
 import { LeftoversPage } from './pages/LeftoversPage';
 
 export const useRoutes = isAuthenticated => {
-  console.log(isAuthenticated);
   if (isAuthenticated) {
     return (
       <Switch>
