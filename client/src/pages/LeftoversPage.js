@@ -3,17 +3,17 @@ import { AuthContext } from '../context/AuthContext';
 import { useHttp } from '../hooks/http.hook';
 
 export const LeftoversPage = () => {
-  const [ product, setProduct ] = useState([]);
+  const [ products, setProducts ] = useState([]);
   const { request } = useHttp();
   const { token } = useContext(AuthContext);
 
   const fetchData = useCallback(async () => {
     try {
-      const fetchedProducts = await request('/api/products', 'GET', null, {
+      const fetchedProducts = await request('/api/leftovers', 'GET', null, {
         Authorization: `Bearer ${token}`
       });
 
-      setProduct(fetchedProducts);
+      setProducts(fetchedProducts);
     } catch (e) {}
   }, [token, request]);
 
@@ -29,30 +29,33 @@ export const LeftoversPage = () => {
           <div className="card blue darken-1">
             <table className="responsive-table">
               <tbody>
+
                 <tr>
+                  <td>№ п/п</td>
                   <td>Наименование</td>
-                  <td>{ product.name }</td>
-                </tr>
-                <tr>
                   <td>Код</td>
-                  <td>{ product.code }</td>
-                </tr>
-                <tr>
                   <td>Артикул</td>
-                  <td>{ product.articul }</td>
-                </tr>
-                <tr>
                   <td>Ед. изм</td>
-                  <td>{ product.measure }</td>
-                </tr>
-                <tr>
                   <td>Цена</td>
-                  <td>{ product.price }</td>
-                </tr>
-                <tr>
                   <td>Кол-во</td>
-                  <td>{ product.amount }</td>
                 </tr>
+
+                {
+                  products.map((product, index) => {
+                    return (
+                      <tr key={ product._id }>
+                        <td>{ index + 1 }</td>
+                        <td>{ product.name }</td>
+                        <td>{ product.code }</td>
+                        <td>{ product.articul }</td>
+                        <td>{ product.measure }</td>
+                        <td>{ product.price }</td>
+                        <td>{ product.amount }</td>
+                      </tr>
+                    );
+                  })
+                }
+
               </tbody>
             </table>
           </div>
