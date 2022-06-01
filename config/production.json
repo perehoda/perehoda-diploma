@@ -1,0 +1,5 @@
+{
+  "port": 80,
+  "jwtSecret": "perehoda",
+  "mongoUri": "mongodb+srv://5xxxtimoxaxxx5:P1rehoda@cluster0.bkjxzud.mongodb.net/?retryWrites=true&w=majority"
+}
