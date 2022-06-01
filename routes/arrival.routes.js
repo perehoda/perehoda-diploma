@@ -7,13 +7,23 @@ router.post('/', auth, async (req, res) => {
   try {
     const { name, articul, measure, price, amount } = req.body;
 
-    const product = new Product({
-      userID: req.user.userId, name, articul, measure, price, amount
-    });
+    if (name) {
+      const product = new Product({
+        userID: req.user.userId, name, articul, measure, price, amount
+      });
+ 
+      await product.save();
+  
+      res.status(201).json({ product });
+    } else {
+      const requiredProduct = await Product.findOne({ articul });
 
-    await product.save();
+      requiredProduct.amount += Number(amount);
 
-    res.status(201).json({ product });
+      await Product.findOneAndUpdate({ articul }, { amount: requiredProduct.amount });
+
+      res.status(201).json({ requiredProduct });
+    }
   } catch(e) {
     res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова.' });
   }
